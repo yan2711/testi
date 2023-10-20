@@ -1,0 +1,63 @@
+.faq-block
+ display: flex
+ flex-direction: column
+ align-items: center
+
+.faq-block__title
+ display: block
+ font-size: 44px
+ padding: 100px 0 40px 0
+ 
+
+.faq-block__cards
+ width: 1000px
+ display: flex
+ flex-direction: column
+
+.faq-block__card
+ border-bottom: 1px solid #000
+ padding: 20px 0 20px 0
+
+.faq-block__question
+ display: block
+ cursor: pointer
+ font-weight: 700
+ font-size: 24px
+ position: relative
+ width: 90%
+
+.faq-block__question:after
+ content: ""
+ display: block
+ border-style: solid
+ border-width: 0 17.5px 20px 17.5px
+ border-color: transparent transparent #323232 transparent
+ position: absolute
+ top: 50%
+ right: -60px
+ transform: translateY(-50%)
+
+.faq-input
+ width: 0
+ height: 0
+ -webkit-appearance: none
+ appearance: none
+ position: absolute
+
+.faq-input:checked ~ .faq-block__question:after
+ border-style: solid
+ border-width: 20px 17.5px 0 17.5px
+ border-color: #323232 transparent transparent transparent
+
+.faq-input:checked ~ .faq-block__answer
+ display: block
+
+.faq-block__answer
+ display: none
+ padding: 15px 0 15px 0
+ font-size: 18px
+
+.faq-block__answer p
+ padding-top: 15px
+
+
